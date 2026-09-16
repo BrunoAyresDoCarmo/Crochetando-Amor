@@ -40,12 +40,28 @@
   font-size: 0.8rem;
 }
 
-.cabeçalho__navegação__encomendar {
+.botao {
+  display: inline-block;
   font-family: var(--font-family-primary);
   font-weight: 400;
   text-decoration: none;
-  color: var(--text-tertiary-color);
   text-transform: uppercase;
-  margin-left: auto;
   font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.botao--primario {
+  margin-left: auto;
+  color: var(--text-primary-color);
+  background-color: var(--background-color-tertiary);
+}
+
+.botao--primario:hover {
+  color: var(--background-color-tertiary);
+  background-color: transparent;
+  border-color: var(--background-color-tertiary);
 }
