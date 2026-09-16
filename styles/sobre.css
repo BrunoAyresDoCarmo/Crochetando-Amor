@@ -1,0 +1,129 @@
+.sobre {
+    background-color: var(--background-color-secondary);
+    padding: 18vh 10vw;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(14rem, 26rem);
+    gap: 5rem;
+    align-items: center;
+}
+
+.sobre__conteudo {
+    min-width: 0;
+}
+
+.sobre__titulo__secundario {
+    font-family: var(--font-family-tertiary);
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: var(--text-secondary-color);
+}
+
+.sobre__titulo {
+    font-family: var(--font-family-secondary);
+    font-weight: 400;
+    font-size: 3.8rem;
+    color: var(--text-quaternary-color);
+    margin: 2rem 0;
+    line-height: 1.3;
+}
+
+.sobre__titulo__destaque {
+    color: var(--background-color-tertiary);
+    display:block;
+    margin-top: -1rem;
+}
+
+.sobre__descrição {
+    font-family: var(--font-family-secondary);
+    font-weight: 400;
+    font-size: 1.2rem;
+    font-style: italic;
+    line-height: 1.6;
+    color: var(--background-color);
+    max-width: 46rem;
+    margin: 1.5rem 0 2rem;
+    padding-left: 1.5rem;
+    border-left: 2px solid var(--background-color-tertiary);
+}
+
+.sobre__descrição__secundario {
+    font-family: var(--font-family-primary);
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--background-color);
+    max-width: 46rem;
+    margin: 1.5rem 0;
+    line-height: 1.6;
+}
+
+.sobre__titulo__destaque__secundario {
+    color: var(--background-color-tertiary);
+}
+
+.sobre__indicadores {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 46rem;
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 2px solid var(--text-tertiary-color);
+}
+
+.sobre__indicador {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.sobre__indicador__valor {
+    font-family: var(--font-family-tertiary);
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--background-color-tertiary);
+}
+
+.sobre__indicador__legenda {
+    font-family: var(--font-family-primary);
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-secondary-color);
+}
+
+.sobre__imagem {
+    width: min(100%, 26rem);
+    justify-self: end;
+}
+
+.sobre__imagem img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+    .sobre {
+        display: block;
+        padding: 5rem 2rem;
+    }
+
+    .sobre__imagem {
+        width: min(100%, 22rem);
+        margin: 3rem auto 0;
+    }
+
+    .sobre__indicadores {
+        gap: 1rem;
+    }
+
+    .sobre__indicador__valor {
+        font-size: 1.6rem;
+    }
+
+    .sobre__indicador__legenda {
+        font-size: 0.6rem;
+        letter-spacing: 0.1em;
+    }
+}

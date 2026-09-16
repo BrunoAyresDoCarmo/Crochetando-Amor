@@ -3,7 +3,7 @@
     background-image: linear-gradient(to right, rgba(0, 0, 0, 1.7) 0%, rgba(0, 0, 0, 0.40) 60%), url("../imagens/hero_imagem1.webp");
     background-size: cover;
     background-position: center;
-    padding: 30vh 5vw; 
+    padding: 32vh 5vw; 
     text-align: left;
 }
 
@@ -44,6 +44,16 @@
     font-size: 0.875rem; 
     color: var(--text-tertiary-color);
     margin-bottom: 3rem;
+}
+
+.banner__titular::before {
+    content: "";
+    display: inline-block;
+    width: 2rem;
+    height: 1px;
+    margin-right: 0.75rem;
+    background-color: var(--text-secondary-color);
+    vertical-align: middle;
 }
 
 .banner__descrição {

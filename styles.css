@@ -1,9 +1,10 @@
 @import url("styles/header.css");
 @import url("styles/banner.css");
+@import url("styles/sobre.css");
 
 :root {
     --font-family-primary: "Lato";
-    --font-family-secondary: "PlayFair";
+    --font-family-secondary: "Playfair Display";
     --font-family-tertiary: "Dancing Script";
     --background-color: #2C1505;
     --background-color-secondary: #F9F5EF;
@@ -11,5 +12,6 @@
     --text-primary-color: #F9F5EF;
     --text-secondary-color: #C8892E;
     --text-tertiary-color: #EAD9BF;
+    --text-quaternary-color: #1A0A03;
 }
 
