@@ -127,3 +127,9 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+/* faz width/max-width incluírem padding e borda */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}

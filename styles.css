@@ -3,9 +3,9 @@
 @import url("styles/sobre.css");
 
 :root {
-    --font-family-primary: "Lato";
-    --font-family-secondary: "Playfair Display";
-    --font-family-tertiary: "Dancing Script";
+    --font-family-primary: "Lato", sans-serif;
+    --font-family-secondary: "Playfair Display", serif;
+    --font-family-tertiary: "Dancing Script", cursive;
     --background-color: #2C1505;
     --background-color-secondary: #F9F5EF;
     --background-color-tertiary: #A8521F;
@@ -13,5 +13,14 @@
     --text-secondary-color: #C8892E;
     --text-tertiary-color: #EAD9BF;
     --text-quaternary-color: #1A0A03;
+    --largura-texto: 46rem;
+}
+
+html {
+    scroll-padding-top: 4rem;
+}
+
+body {
+    font-family: var(--font-family-primary);
 }
 

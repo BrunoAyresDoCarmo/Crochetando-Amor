@@ -1,10 +1,9 @@
 .banner {
     background-color: var(--background-color);
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 1.7) 0%, rgba(0, 0, 0, 0.40) 60%), url("../imagens/hero_imagem1.webp");
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.40) 60%), url("../imagens/hero_imagem1.webp");
     background-size: cover;
     background-position: center;
-    padding: 32vh 5vw; 
-    text-align: left;
+    padding: 32vh 5vw;
 }
 
 .banner__titulo,
@@ -15,9 +14,7 @@
 }
 
 .banner__caracteristicas {
-    font-family: var(--font-family-primary);
-    font-weight: 400;
-    font-size: 1rem; 
+    font-size: 1rem;
     color: var(--text-secondary-color);
     text-transform: uppercase;
     margin-bottom: 2rem;
@@ -26,22 +23,21 @@
 .banner__titulo {
     font-family: var(--font-family-secondary);
     font-weight: 700;
-    font-size: 5rem; 
+    font-size: clamp(2.5rem, 11vw, 5rem);
     color: var(--text-primary-color);
 }
 
 .banner__titulo__destaque {
+    display: block; /* pra ficar a baixo do título principal */
     font-family: var(--font-family-tertiary);
     font-weight: 700;
-    font-size: 4rem; 
+    font-size: clamp(2rem, 9vw, 4rem);
     color: var(--text-secondary-color);
     margin-bottom: 1rem;
 }
 
 .banner__titular {
-    font-family: var(--font-family-primary);
-    font-weight: 400;
-    font-size: 0.875rem; 
+    font-size: 0.875rem;
     color: var(--text-tertiary-color);
     margin-bottom: 3rem;
 }
@@ -57,9 +53,7 @@
 }
 
 .banner__descrição {
-    font-family: var(--font-family-primary);
-    font-weight: 400;
-    font-size: 1rem; 
+    font-size: 1rem;
     color: var(--text-tertiary-color);
     max-width: 40ch;
 }

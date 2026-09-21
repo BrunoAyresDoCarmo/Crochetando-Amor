@@ -2,9 +2,9 @@
   background-color: var(--background-color);
   border-bottom: 1px solid var(--text-secondary-color);
   display: flex;
-  gap: 20rem;
   align-items: center;
-  position: relative;
+  /* encolhe em telas menores e chega a 20rem em telas bem grandes */
+  column-gap: clamp(2rem, 15vw, 20rem);
   padding: 0.5rem 2.5rem;
   position: sticky;
   top: 0;
@@ -32,8 +32,6 @@
 }
 
 .cabeçalho__navegação__lista__item__link {
-  font-family: var(--font-family-primary);
-  font-weight: 400;
   text-decoration: none;
   color: var(--text-tertiary-color);
   text-transform: uppercase;
@@ -42,15 +40,12 @@
 
 .botao {
   display: inline-block;
-  font-family: var(--font-family-primary);
-  font-weight: 400;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 0.8rem;
   letter-spacing: 0.12em;
   padding: 0.75rem 1.5rem;
   border: 1px solid transparent;
-  cursor: pointer;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
@@ -60,8 +55,41 @@
   background-color: var(--background-color-tertiary);
 }
 
-.botao--primario:hover {
+/* teclado ganha o mesmo efeito do mouse */
+.botao--primario:hover,
+.botao--primario:focus-visible {
   color: var(--background-color-tertiary);
   background-color: transparent;
   border-color: var(--background-color-tertiary);
+}
+
+/* contorno visível para quem navega com Tab */
+.cabeçalho__navegação__lista__item__link:focus-visible,
+.botao:focus-visible {
+  outline: 2px solid var(--text-secondary-color);
+  outline-offset: 4px;
+}
+
+@media (max-width: 1200px) {
+  .cabeçalho {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    position: static; 
+  }
+
+  .cabeçalho__navegação {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .cabeçalho__navegação__lista {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem 1.5rem;
+  }
+
+  .botao--primario {
+    margin-left: 0;
+  }
 }

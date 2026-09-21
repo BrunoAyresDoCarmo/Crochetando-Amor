@@ -7,20 +7,14 @@
     align-items: center;
 }
 
-.sobre__conteudo {
-    min-width: 0;
-}
-
 .sobre__titulo__secundario {
     font-family: var(--font-family-tertiary);
-    font-weight: 400;
     font-size: 1.5rem;
     color: var(--text-secondary-color);
 }
 
 .sobre__titulo {
     font-family: var(--font-family-secondary);
-    font-weight: 400;
     font-size: 3.8rem;
     color: var(--text-quaternary-color);
     margin: 2rem 0;
@@ -29,29 +23,26 @@
 
 .sobre__titulo__destaque {
     color: var(--background-color-tertiary);
-    display:block;
+    display: block;
     margin-top: -1rem;
 }
 
 .sobre__descrição {
     font-family: var(--font-family-secondary);
-    font-weight: 400;
     font-size: 1.2rem;
     font-style: italic;
     line-height: 1.6;
     color: var(--background-color);
-    max-width: 46rem;
+    max-width: var(--largura-texto);
     margin: 1.5rem 0 2rem;
     padding-left: 1.5rem;
     border-left: 2px solid var(--background-color-tertiary);
 }
 
 .sobre__descrição__secundario {
-    font-family: var(--font-family-primary);
-    font-weight: 400;
     font-size: 1rem;
     color: var(--background-color);
-    max-width: 46rem;
+    max-width: var(--largura-texto);
     margin: 1.5rem 0;
     line-height: 1.6;
 }
@@ -64,7 +55,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    max-width: 46rem;
+    max-width: var(--largura-texto);
     margin-top: 2.5rem;
     padding-top: 2rem;
     border-top: 2px solid var(--text-tertiary-color);
@@ -79,21 +70,14 @@
 .sobre__indicador__valor {
     font-family: var(--font-family-tertiary);
     font-size: 2rem;
-    font-weight: 400;
     color: var(--background-color-tertiary);
 }
 
 .sobre__indicador__legenda {
-    font-family: var(--font-family-primary);
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     letter-spacing: 0.15em;
     text-transform: uppercase;
     color: var(--text-secondary-color);
-}
-
-.sobre__imagem {
-    width: min(100%, 26rem);
-    justify-self: end;
 }
 
 .sobre__imagem img {
@@ -103,17 +87,21 @@
     border-radius: 8px;
 }
 
-@media (max-width: 600px) {
+
+@media (max-width: 1000px) {
     .sobre {
-        display: block;
+        grid-template-columns: 1fr;
+        gap: 3rem; /* substitui o margin-top manual da imagem */
         padding: 5rem 2rem;
     }
 
     .sobre__imagem {
         width: min(100%, 22rem);
-        margin: 3rem auto 0;
+        justify-self: center;
     }
+}
 
+@media (max-width: 600px) {
     .sobre__indicadores {
         gap: 1rem;
     }
@@ -123,7 +111,7 @@
     }
 
     .sobre__indicador__legenda {
-        font-size: 0.6rem;
-        letter-spacing: 0.1em;
+        font-size: 0.7rem;
+        letter-spacing: 0.05em;
     }
 }
